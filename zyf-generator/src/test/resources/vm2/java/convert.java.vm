@@ -1,0 +1,15 @@
+package ${fullPackage};
+
+import org.mapstruct.Mapper;
+import ${_fullClass.entity};
+import ${_fullClass.vo};
+import java.util.List;
+/**
+ * ${functionName}  ENTITY <=> VO / Form / Query
+ *
+ * @author zyf ${author}
+ */
+@Mapper(componentModel = "spring"#if($table.sub), uses = ${subClassName}Convert.class#end)
+public interface ${ClassName}Convert  {
+    List<${_className.vo}> dos2vos(List<${_className.domain}> list);
+}
